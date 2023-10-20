@@ -16,9 +16,9 @@ app.secret_key = secrets.token_urlsafe(32)
 
 parser = ResumeParser(os.getenv("OPENAI_API_KEY"))
 
-# def allowed_file(filename):
-#     return '.' in filename and \
-#            filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+def allowed_file(filename):
+    return '.' in filename and \
+           filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
 @app.route("/", methods=['GET', 'POST'])
 @app.route("/resume", methods=['GET', 'POST'])
