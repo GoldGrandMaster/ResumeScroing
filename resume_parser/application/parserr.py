@@ -44,8 +44,8 @@ class resume_to_structured() :
             pageObject = pdfReader.pages[i]
             # extracting text from page
             text += pageObject.extract_text()
-        print(len(text))
-        print(type(text))
+        # print(len(text))
+        # print(type(text))
         info = (text[:10000] + '..') if len(text) > 75 else text
         # Get PDF and return string of it.
 
