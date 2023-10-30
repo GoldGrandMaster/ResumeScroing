@@ -40,10 +40,10 @@ def upload_resume():
             return redirect(url_for('resume', name=filename))
     return render_template('index.html')
 
-@app.route('/resume/<name>')
-def display_resume(name):
-    resume_path = os.path.join(app.config["UPLOAD_FOLDER"], name)
-    return parser.query_resume(resume_path)
+# @app.route('/resume/<name>')
+# def display_resume(name):
+#     resume_path = os.path.join(app.config["UPLOAD_FOLDER"], name)
+#     return parser.query_resume(resume_path)
 
 if __name__ == "__main__":
     host = os.getenv("RESUME_PARSER_HOST", '127.0.0.1')
